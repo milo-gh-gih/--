@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>賀</title>
+    <meta charset="UTF-8">
+    <script>
+        function checkPassword(event) {
+            event.preventDefault();
 
+            const passwordInput = document.getElementById("password").value;
+            const correctPassword = "賀";
+            
+            if (passwordInput === correctPassword) {
+                window.localtion.href = "https://www.google.com/";
+            } else {
+                alert("密碼錯誤，再試一次!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="checkPassword(event)">
+        <label for="password">請輸入賀</label>
+        <br>
+        <input type="password" id="password" required>
+        <br>
+        <input type="submit" value="進入">
+    </form>
+</body>
+</html>
